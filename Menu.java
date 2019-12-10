@@ -11,6 +11,7 @@ public class Menu implements MenuItem{
 	 /*** Lägger till ett menyval till menyn.*/
 	public void add(MenuItem item) {
 		//måste lägga till item till nån slags lista...
+		//ngn sorts scanner
 	}
 	
 	
@@ -32,4 +33,12 @@ public class Menu implements MenuItem{
 		int index = 0;
 		//list.get(index).execute();
 	}
+
+	public void printList() {
+
+	}
+
+
+
+
 }
