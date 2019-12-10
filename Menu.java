@@ -1,7 +1,7 @@
 package lab6;
 
 public class Menu implements MenuItem{
-	/*** Skapar en tom meny med den givna rubriken.*/
+	/**** Skapar en tom meny med den givna rubriken.*/
 	private String title;
 	public Menu(String title) {
 		this.title =  title;
