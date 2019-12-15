@@ -4,12 +4,15 @@ import java.util.*;
 
 public class Movie extends DataObject {
 	private String director;
-	private int pgAge;
+	private int length;
 	
-	public Movie( String title, String director, int pgAge, String itemNr, int price) {
-		super(title, itemNr, price);
+	public static List<Movie> movies  = new ArrayList<>();
+	
+	public Movie( String title, String director, int pgAge,  int price) {
+		super();
 		this.setDirector(director);
-		this.setPgAge(pgAge);
+		this.setLength(pgAge);
+		
 	}
 	
 	public String getDirector() {
@@ -20,24 +23,32 @@ public class Movie extends DataObject {
 		this.director = director;
 	}
 	
-	public int getPgAge() {
-		return pgAge;
+	public int getLength() {
+		return length;
+		
 	}
-	public void setPgAge(int pgAge) {
-		this.pgAge = pgAge;
+	public void setLength(int length) {
+		this.length = length;
+	}
+	
+	public static void addMovie(Movie m) {
+		movies.add(m);
 	}
 	
 	
+	public static void printMovie() {
+		if(!movies.isEmpty()) {
+			System.out.println("Filmer i din varukorg:");
+		for(DataObject movie : movies) {
+			System.out.println(movie);
+			}
+		}
+		else
+			System.out.println("\nInga filmer i din varukorg!\n");
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	public String toString() {
+		return "Titel: " + title + "\nRegissör: " + director + "\nLängd: " + length + "\nPris: " + price + "kr\n";
+	}
 	
 }
-
-

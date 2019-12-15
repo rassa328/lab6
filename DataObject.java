@@ -1,21 +1,16 @@
 package lab6;
 
-import java.util.*;
-
-
 public class DataObject {
 
-	 String title;
-	 String itemNr;
-	 int price;
+	 protected String title;
+	 protected int price;
 	
 	public DataObject() {
-		
 	}
 	
-	public DataObject(String titel, String itemNr, int price) {
+	public DataObject(String titel, int price) {
+		super();
 		this.setTitle(title);
-		this.setItemNr(itemNr);
 		this.setPrice(price);
 	}
 
@@ -26,15 +21,7 @@ public class DataObject {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-	public String getItemNr() {
-		return itemNr;
-	}
-
-	public void setItemNr(String itemNr) {
-		this.itemNr = itemNr;
-	}
-
+	
 	public int getPrice() {
 		return price;
 	}
@@ -42,8 +29,5 @@ public class DataObject {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-
-
 	
 }
